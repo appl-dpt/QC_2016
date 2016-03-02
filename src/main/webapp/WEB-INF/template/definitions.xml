@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC  
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+    <definition name="default" template="/WEB-INF/template/default/template.jsp">
+        <put-attribute name="title" value="Home" />
+        <put-attribute name="header"
+            value="/WEB-INF/template/default/header.jsp" />
+        <put-attribute name="menu"
+            value="/WEB-INF/template/default/menu.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer"
+            value="/WEB-INF/template/default/footer.jsp" />
+        <put-list-attribute name="javascripts">
+            <add-attribute value="/js/jquery-2.2.0.min.js" />
+            <add-attribute value="/js/jquery.validate.min.js" />
+            <add-attribute value="/js/bootstrap.min.js" />
+            <add-attribute value="/js/main.js" />
+        </put-list-attribute>
+        <put-list-attribute name="stylesheets">
+            <add-attribute value="/css/bootstrap.min.css" />
+            <add-attribute value="/css/flags.css" />
+            <add-attribute value="/css/style.css" />
+        </put-list-attribute>
+    </definition>
+
+
+    <definition name="addApartment" extends="default">
+        <put-attribute name="menu"
+            value="/WEB-INF/views/renter/allApartmentsMenu.jsp" />
+        <put-attribute name="body"
+            value="/WEB-INF/views/renter/addApartment.jsp" />
+        <put-attribute name="title" value="Add apartment" />
+        <put-list-attribute name="javascripts"
+            inherit="true">
+            <add-attribute
+                value="http://maps.googleapis.com/maps/api/js?v=3.exp&amp;libraries=places" />
+            <add-attribute value="/js/apartmentDetail.js" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="allApartments" extends="default">
+        <put-attribute name="menu"
+            value="/WEB-INF/views/renter/allApartmentsMenu.jsp" />
+        <put-attribute name="body"
+            value="/WEB-INF/views/renter/allApartments.jsp" />
+    </definition>
+
+    <definition name="enabledApartments" extends="default">
+        <put-attribute name="menu"
+            value="/WEB-INF/views/renter/allApartmentsMenu.jsp" />
+        <put-attribute name="body"
+            value="/WEB-INF/views/renter/enabledApartments.jsp" />
+        <put-list-attribute name="javascripts"
+            inherit="true">
+            <add-attribute value="/js/listApartments.js" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="disabledApartments" extends="default">
+        <put-attribute name="menu"
+            value="/WEB-INF/views/renter/allApartmentsMenu.jsp" />
+        <put-attribute name="body"
+            value="/WEB-INF/views/renter/disabledApartments.jsp" />
+        <put-list-attribute name="javascripts"
+            inherit="true">
+            <add-attribute value="/js/listApartments.js" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="unpublishedApartments" extends="default">
+        <put-attribute name="menu"
+            value="/WEB-INF/views/renter/allApartmentsMenu.jsp" />
+        <put-attribute name="body"
+            value="/WEB-INF/views/renter/unpublishedApartments.jsp" />
+        <put-list-attribute name="javascripts"
+            inherit="true">
+            <add-attribute value="/js/listApartments.js" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="apartmentDetail" extends="default">
+        <put-attribute name="menu"
+            value="/WEB-INF/views/renter/apartmentDetailMenu.jsp" />
+        <put-attribute name="body"
+            value="/WEB-INF/views/renter/apartmentDetail.jsp" />
+        <put-attribute name="title" value="Apartment detail" />
+        <put-list-attribute name="stylesheets"
+            inherit="true">
+            <add-attribute value="/css/spinner.css" />
+        </put-list-attribute>
+        <put-list-attribute name="javascripts"
+            inherit="true">
+            <add-attribute
+                value="http://maps.googleapis.com/maps/api/js?v=3.exp&amp;libraries=places" />
+            <add-attribute value="/js/jquery-ui.min.js" />
+            <add-attribute value="/js/apartmentDetail.js" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="previewApartment" extends="default">
+        <put-attribute name="menu"
+            value="/WEB-INF/views/renter/apartmentDetailMenu.jsp" />
+        <put-attribute name="body"
+            value="/WEB-INF/views/tenant/bookingApartment.jsp" />
+        <put-attribute name="title" value="Apartment preview" />
+        <put-list-attribute name="stylesheets"
+            inherit="true">
+            <add-attribute value="/css/jquery-ui.min.css" />
+            <add-attribute value="/css/custom_slider.css" />
+        </put-list-attribute>
+        <put-list-attribute name="javascripts"
+            inherit="true">
+            <add-attribute
+                value="http://maps.googleapis.com/maps/api/js?v=3.exp" />
+            <add-attribute value="/js/jquery-ui.min.js" />
+            <add-attribute value="/js/jssor.slider.mini.js" />
+            <add-attribute value="/js/custom_slider.js" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="userDetailRenter" extends="default">
+        <put-attribute name="menu"
+            value="/WEB-INF/views/renter/apartmentDetailMenu.jsp" />
+        <put-attribute name="body"
+            value="/WEB-INF/views/userDetails.jsp" />
+        <put-attribute name="title" value="User Details" />
+        <put-list-attribute name="stylesheets"
+            inherit="true">
+            <add-attribute value="/css/jquery-ui.min.css" />
+        </put-list-attribute>
+        <put-list-attribute name="javascripts"
+            inherit="true">
+            <add-attribute value="/js/jquery-ui.min.js" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="userDetailTenant" extends="default">
+        <put-attribute name="menu"
+            value="/WEB-INF/views/tenant/menu.jsp" />
+        <put-attribute name="body"
+            value="/WEB-INF/views/userDetails.jsp" />
+        <put-attribute name="title" value="User Details" />
+        <put-list-attribute name="stylesheets"
+            inherit="true">
+            <add-attribute value="/css/jquery-ui.min.css" />
+        </put-list-attribute>
+        <put-list-attribute name="javascripts"
+            inherit="true">
+            <add-attribute value="/js/jquery-ui.min.js" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="renterApartmentHistory" extends="default">
+        <put-attribute name="menu"
+            value="/WEB-INF/views/renter/apartmentDetailMenu.jsp" />
+        <put-attribute name="body"
+            value="/WEB-INF/views/renter/apartmentHistory.jsp" />
+        <put-attribute name="title" value="Apartment preview" />
+        <put-list-attribute name="stylesheets"
+            inherit="true">
+            <add-attribute value="/css/jquery-ui.min.css" />
+        </put-list-attribute>
+        <put-list-attribute name="javascripts"
+            inherit="true">
+            <add-attribute value="/js/jquery-ui.min.js" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="UserList" extends="default">
+        <put-attribute name="menu"
+            value="/WEB-INF/views/admin/adminConfigurationMenu.jsp" />
+        <put-attribute name="body"
+            value="/WEB-INF/views/admin/UserList.jsp" />
+        <put-attribute name="title" value="Users List" />
+        <put-list-attribute name="javascripts"
+            inherit="true">
+            <add-attribute value="/js/jquery-ui.min.js" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="UserForm" extends="default">
+        <put-attribute name="body"
+            value="/WEB-INF/views/admin/UserForm.jsp" />
+        <put-attribute name="title" value="Users Form" />
+    </definition>
+
+    <definition name="bookingApartment" extends="default">
+        <put-attribute name="body"
+            value="/WEB-INF/views/tenant/bookingApartment.jsp" />
+        <put-attribute name="title" value="Book apartment" />
+        <put-list-attribute name="stylesheets"
+            inherit="true">
+            <add-attribute value="/css/jquery-ui.min.css" />
+            <add-attribute value="/css/custom_slider.css" />
+        </put-list-attribute>
+        <put-list-attribute name="javascripts"
+            inherit="true">
+            <add-attribute
+                value="http://maps.googleapis.com/maps/api/js?v=3.exp" />
+            <add-attribute value="/js/moment.js" />
+            <add-attribute value="/js/jquery-ui.min.js" />
+            <add-attribute value="/js/datepicker-uk.js" />
+            <add-attribute value="/js/datepicker-en-GB.js" />
+            <add-attribute value="/js/custom_datepicker.js" />
+            <add-attribute value="/js/jssor.slider.mini.js" />
+            <add-attribute value="/js/custom_slider.js" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="paymentDetails" extends="default">
+        <put-attribute name="body"
+            value="/WEB-INF/views/tenant/orderPayment.jsp" />
+        <put-attribute name="title" value="Payment" />
+        <put-list-attribute name="stylesheets"
+            inherit="true">
+            <add-attribute value="/css/jquery-ui.min.css" />
+        </put-list-attribute>
+        <put-list-attribute name="javascripts"   inherit="true">
+        </put-list-attribute>
+    </definition>
+    
+        <definition name="paymentResult" extends="default">
+        <put-attribute name="body"
+            value="/WEB-INF/views/tenant/paymentResult.jsp" />
+        <put-attribute name="title" value="Payment" />
+        <put-list-attribute name="stylesheets"
+            inherit="true">
+            <add-attribute value="/css/jquery-ui.min.css" />
+        </put-list-attribute>
+        <put-list-attribute name="javascripts"   inherit="true">
+        </put-list-attribute>
+    </definition>
+    
+        <definition name="compressTest" extends="default">
+        <put-attribute name="body"
+            value="/WEB-INF/views/tenant/ZipTest.jsp" />
+        <put-attribute name="title" value="Payment" />
+        <put-list-attribute name="stylesheets"
+            inherit="true">
+            <add-attribute value="/css/jquery-ui.min.css" />
+        </put-list-attribute>
+        <put-list-attribute name="javascripts"   inherit="true">
+        </put-list-attribute>
+    </definition>
+
+    <definition name="registration" extends="default">
+        <put-attribute name="body"
+            value="/WEB-INF/views/registration.jsp" />
+        <put-attribute name="title" value="User registration" />
+    </definition>
+
+	<definition name="index" extends="default">
+	    <put-attribute name="menu" value="/WEB-INF/views/startpageFilters.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/startpage.jsp" />
+		<put-attribute name="title" value="Home" />
+		<put-list-attribute name="stylesheets" inherit="true">
+			<add-attribute value="/css/jquery-ui.min.css" />
+		</put-list-attribute>
+        <put-list-attribute name="javascripts" inherit="true">
+            <add-attribute value="http://maps.googleapis.com/maps/api/js?v=3.exp&amp;libraries=places" />
+            <add-attribute value="/js/jquery-ui.min.js" />
+            <add-attribute value="/js/datepicker-uk.js" />
+            <add-attribute value="/js/datepicker-en-GB.js" /> 
+            <add-attribute value="/js/paginationIndex.js" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="login" extends="default">
+        <put-attribute name="body" value="/WEB-INF/views/login.jsp" />
+        <put-attribute name="title" value="Login" />
+        <put-list-attribute name="stylesheets"
+            inherit="true">
+            <add-attribute value="/css/bootstrap-social.css" />
+            <add-attribute value="/css/font-awesome.min.css" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="userSettings" extends="default">
+        <put-attribute name="menu"
+            value="/WEB-INF/views/tenant/menu.jsp" />
+        <put-attribute name="body"
+            value="/WEB-INF/views/userSettings.jsp" />
+        <put-attribute name="title" value="User Profile" />
+        <put-list-attribute name="javascripts"
+            inherit="true">
+            <add-attribute value="/js/jquery-ui.min.js" />
+            <add-attribute value="/js/jquery.imgareaselect.min.js" />
+            <add-attribute value="/js/cropImage.js" />
+        </put-list-attribute>
+        <put-list-attribute name="stylesheets"
+            inherit="true">
+            <add-attribute value="/css/imgareaselect-animated.css" />
+            <add-attribute value="/css/imgareaselect-default.css" />
+            <add-attribute value="/css/imgareaselect-deprecated.css" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="errorPage" extends="default">
+        <put-attribute name="body"
+            value="/WEB-INF/views/info/errorPage.jsp" />
+        <put-attribute name="title" value="Not found!" />
+    </definition>
+    <definition name="accessDenied" extends="default">
+        <put-attribute name="body"
+            value="/WEB-INF/views/info/accessDenied.jsp" />
+        <put-attribute name="title" value="Not found!" />
+    </definition>
+
+    <definition name="reservationDetail" extends="default">
+        <put-attribute name="menu"
+            value="/WEB-INF/views/renter/apartmentDetailMenu.jsp" />
+        <put-attribute name="body"
+            value="/WEB-INF/views/renter/reservationDetail.jsp" />
+        <put-attribute name="title" value="Reservation Detail" />
+        <put-list-attribute name="javascripts"
+            inherit="true">
+            <add-attribute value="/js/jquery-ui.min.js" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="tenantReservationDetail" extends="default">
+        <put-attribute name="menu"
+            value="/WEB-INF/views/tenant/menu.jsp" />
+        <put-attribute name="body"
+            value="/WEB-INF/views/tenant/reservationDetail.jsp" />
+        <put-attribute name="title" value="Reservation Detail" />
+        <put-list-attribute name="javascripts"
+            inherit="true">
+            <add-attribute value="/js/jquery-ui.min.js" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="futureReservations" extends="default">
+        <put-attribute name="menu"
+            value="/WEB-INF/views/renter/apartmentDetailMenu.jsp" />
+        <put-attribute name="body"
+            value="/WEB-INF/views/renter/futureReservations.jsp" />
+        <put-attribute name="title" value="Future reservations" />
+        <put-list-attribute name="javascripts"
+            inherit="true">
+            <add-attribute value="/js/jquery-ui.min.js" />
+            <add-attribute value="/js/reservationsInfo.js" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="needConfirmReservations" extends="default">
+        <put-attribute name="menu"
+            value="/WEB-INF/views/renter/apartmentDetailMenu.jsp" />
+        <put-attribute name="body"
+            value="/WEB-INF/views/renter/needConfirmReservations.jsp" />
+        <put-attribute name="title" value="Future reservations" />
+        <put-list-attribute name="javascripts"
+            inherit="true">
+            <add-attribute value="/js/jquery-ui.min.js" />
+            <add-attribute value="/js/reservationsInfo.js" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="currentReservations" extends="default">
+        <put-attribute name="menu"
+            value="/WEB-INF/views/renter/apartmentDetailMenu.jsp" />
+        <put-attribute name="body"
+            value="/WEB-INF/views/renter/currentReservations.jsp" />
+        <put-attribute name="title" value="Current reservations" />
+        <put-list-attribute name="javascripts"
+            inherit="true">
+            <add-attribute value="/js/jquery-ui.min.js" />
+            <add-attribute value="/js/reservationsInfo.js" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="historyReservations" extends="default">
+        <put-attribute name="menu"
+            value="/WEB-INF/views/renter/apartmentDetailMenu.jsp" />
+        <put-attribute name="body"
+            value="/WEB-INF/views/renter/historyReservations.jsp" />
+        <put-attribute name="title" value="History" />
+        <put-list-attribute name="javascripts"
+            inherit="true">
+            <add-attribute value="/js/jquery-ui.min.js" />
+            <add-attribute value="/js/reservationsInfo.js" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="userOrders" extends="default">
+        <put-attribute name="menu"
+            value="/WEB-INF/views/tenant/menu.jsp" />
+        <put-attribute name="body"
+            value="/WEB-INF/views/tenant/userOrders.jsp" />
+        <put-attribute name="title" value="User Orders" />
+
+        <put-list-attribute name="stylesheets"
+            inherit="true">
+            <add-attribute value="/css/jquery-ui.min.css" />
+        </put-list-attribute>
+
+        <put-list-attribute name="javascripts"
+            inherit="true">
+            <add-attribute value="/js/jquery-ui.min.js" />
+            <add-attribute value="/js/datepicker-uk.js" />
+            <add-attribute value="/js/datepicker-en-GB.js" />
+            <add-attribute value="/js/apartmentDetail.js" />
+            <add-attribute value="/js/pagination.js" />
+        </put-list-attribute>
+    </definition>
+    <definition name="ordersToPay" extends="default">
+        <put-attribute name="menu"
+            value="/WEB-INF/views/tenant/menu.jsp" />
+        <put-attribute name="body"
+            value="/WEB-INF/views/tenant/ordersToPay.jsp" />
+        <put-attribute name="title" value="Orders to pay" />
+                <put-list-attribute name="stylesheets"
+            inherit="true">
+            <add-attribute value="/css/jquery-ui.min.css" />
+        </put-list-attribute>
+
+        <put-list-attribute name="javascripts"
+            inherit="true">
+            <add-attribute value="/js/jquery-ui.min.js" />
+            <add-attribute value="/js/datepicker-uk.js" />
+            <add-attribute value="/js/datepicker-en-GB.js" />
+            <add-attribute value="/js/apartmentDetail.js" />
+            <add-attribute value="/js/pagination.js" />
+        </put-list-attribute>
+    </definition>
+    <definition name="paymentApproved" extends="default">
+        <put-attribute name="body"
+            value="/WEB-INF/views/tenant/paymentApproved.jsp" />
+        <put-attribute name="title" value="Payment approved" />
+    </definition>
+    <definition name="historyOrders" extends="default">
+        <put-attribute name="menu"
+            value="/WEB-INF/views/tenant/menu.jsp" />
+        <put-attribute name="body"
+            value="/WEB-INF/views/tenant/historyOrders.jsp" />
+        <put-attribute name="title" value="History Orders" />
+
+        <put-list-attribute name="stylesheets"
+            inherit="true">
+            <add-attribute value="/css/jquery-ui.min.css" />
+        </put-list-attribute>
+
+        <put-list-attribute name="javascripts"
+            inherit="true">
+            <add-attribute value="/js/jquery-ui.min.js" />
+            <add-attribute value="/js/datepicker-uk.js" />
+            <add-attribute value="/js/datepicker-en-GB.js" />
+            <add-attribute value="/js/pagination.js" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="enabledModeratorApartments" extends="default">
+        <put-attribute name="menu"
+            value="/WEB-INF/views/moderator/moderatorMenu.jsp" />
+        <put-attribute name="body"
+            value="/WEB-INF/views/moderator/listEnabledApartments.jsp" />
+        <put-list-attribute name="javascripts"
+            inherit="true">
+            <add-attribute value="/js/jquery-ui.min.js" />
+            <add-attribute value="/js/moderatorApartments.js" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="disabledModeratorApartments" extends="default">
+        <put-attribute name="menu"
+            value="/WEB-INF/views/moderator/moderatorMenu.jsp" />
+        <put-attribute name="body"
+            value="/WEB-INF/views/moderator/listDisabledApartments.jsp" />
+        <put-list-attribute name="javascripts"
+            inherit="true">
+            <add-attribute value="/js/jquery-ui.min.js" />
+            <add-attribute value="/js/moderatorApartments.js" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="freeApartments" extends="default">
+        <put-attribute name="menu"
+            value="/WEB-INF/views/moderator/moderatorMenu.jsp" />
+        <put-attribute name="body"
+            value="/WEB-INF/views/moderator/listFreeApartmets.jsp" />
+        <put-list-attribute name="javascripts"
+            inherit="true">
+            <add-attribute value="/js/jquery-ui.min.js" />
+            <add-attribute value="/js/moderatorApartments.js" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="userDetailModerator" extends="default">
+        <put-attribute name="menu"
+            value="/WEB-INF/views/moderator/moderatorMenu.jsp" />
+        <put-attribute name="body"
+            value="/WEB-INF/views/userDetails.jsp" />
+        <put-attribute name="title" value="Apartment preview" />
+        <put-list-attribute name="stylesheets"
+            inherit="true">
+            <add-attribute value="/css/jquery-ui.min.css" />
+        </put-list-attribute>
+        <put-list-attribute name="javascripts"
+            inherit="true">
+            <add-attribute value="/js/jquery-ui.min.js" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="moderatorMap" extends="default">
+        <put-attribute name="menu"
+            value="/WEB-INF/views/moderator/moderatorMenu.jsp" />
+        <put-attribute name="body"
+            value="/WEB-INF/views/moderator/moderatorMap.jsp" />
+        <put-list-attribute name="javascripts"
+            inherit="true">
+            <add-attribute
+                value="http://maps.googleapis.com/maps/api/js?v=3.exp" />
+            <add-attribute value="/js/moderatorMaps.js" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="moderatorPreviewApartment" extends="default">
+        <put-attribute name="menu"
+            value="/WEB-INF/views/moderator/moderatorMenu.jsp" />
+        <put-attribute name="body"
+            value="/WEB-INF/views/tenant/bookingApartment.jsp" />
+        <put-attribute name="title" value="Apartment preview" />
+        <put-list-attribute name="stylesheets"
+            inherit="true">
+            <add-attribute value="/css/jquery-ui.min.css" />
+            <add-attribute value="/css/custom_slider.css" />
+        </put-list-attribute>
+        <put-list-attribute name="javascripts"
+            inherit="true">
+            <add-attribute
+                value="http://maps.googleapis.com/maps/api/js?v=3.exp" />
+            <add-attribute value="/js/jquery-ui.min.js" />
+            <add-attribute value="/js/jssor.slider.mini.js" />
+            <add-attribute value="/js/custom_slider.js" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="moderatorApartmentHistory" extends="default">
+        <put-attribute name="menu"
+            value="/WEB-INF/views/moderator/moderatorMenu.jsp" />
+        <put-attribute name="body"
+            value="/WEB-INF/views/moderator/apartmentHistory.jsp" />
+        <put-attribute name="title" value="Apartment preview" />
+        <put-list-attribute name="stylesheets"
+            inherit="true">
+        </put-list-attribute>
+        <put-list-attribute name="javascripts"
+            inherit="true">
+        </put-list-attribute>
+    </definition>
+
+    <definition name="adminConfiguration" extends="default">
+        <put-attribute name="menu"
+            value="/WEB-INF/views/tenant/menu.jsp" />
+        <put-attribute name="body"
+            value="/WEB-INF/views/admin/adminConfiguration.jsp" />
+        <put-attribute name="title" value="Admin Configuration" />
+    </definition>
+
+    <definition name="allExtentions" extends="default">
+        <put-attribute name="menu"
+            value="/WEB-INF/views/tenant/menu.jsp" />
+        <put-attribute name="body"
+            value="/WEB-INF/views/admin/allExtentions.jsp" />
+        <put-attribute name="title" value="All Extentions" />
+    </definition>
+
+    <definition name="allConveniences" extends="default">
+        <put-attribute name="menu"
+            value="/WEB-INF/views/tenant/menu.jsp" />
+        <put-attribute name="body"
+            value="/WEB-INF/views/admin/allConveniences.jsp" />
+        <put-attribute name="title" value="All Extentions" />
+    </definition>
+    
+    <definition name="backup" extends="default">
+    	<put-attribute name="menu" value="/WEB-INF/views/tenant/menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/admin/backup.jsp" />
+        <put-attribute name="title" value="Backup" />
+    </definition>
+
+    <definition name="allPayments" extends="default">
+    	<put-attribute name="menu" value="/WEB-INF/views/tenant/menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/admin/allPayments.jsp" />
+        <put-attribute name="title" value="Payments" />
+        <put-list-attribute name="javascripts"
+            inherit="true">
+            <add-attribute value="/js/jquery-ui.min.js" />
+        </put-list-attribute>
+    </definition>
+    
+    <definition name="RenterList" extends="default">
+        <put-attribute name="menu" value="/WEB-INF/views/tenant/menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/admin/RenterList.jsp" />
+        <put-attribute name="title" value="Renter List" />
+        <put-list-attribute name="javascripts" inherit="true">
+            <add-attribute value="/js/jquery-ui.min.js" />
+        </put-list-attribute>
+    </definition>
+    
+</tiles-definitions>

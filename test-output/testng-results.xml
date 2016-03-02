@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="6288" started-at="2016-02-29T13:54:03Z" finished-at="2016-02-29T13:54:09Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="6288" started-at="2016-02-29T13:54:03Z" finished-at="2016-02-29T13:54:09Z">
+      <class name="com.softserve.hotels.controller.AdminControllerTest">
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:com.softserve.hotels.controller.AdminControllerTest@327f54e7]" test-instance-name="" name="springTestContextBeforeTestClass" is-config="true" duration-ms="7" started-at="2016-02-29T15:54:03Z" finished-at="2016-02-29T15:54:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method name="springTestContextPrepareTestInstance" test-instance-name="" signature="springTestContextPrepareTestInstance()[pri:0, instance:com.softserve.hotels.controller.AdminControllerTest@327f54e7]" is-config="true" status="PASS" duration-ms="5443" finished-at="2016-02-29T15:54:08Z" started-at="2016-02-29T15:54:03Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.softserve.hotels.controller.AdminControllerTest@327f54e7]" test-instance-name="" name="setUp" is-config="true" duration-ms="35" started-at="2016-02-29T15:54:08Z" finished-at="2016-02-29T15:54:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.softserve.hotels.controller.AdminControllerTest@327f54e7]" test-instance-name="" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="67" started-at="2016-02-29T15:54:08Z" finished-at="2016-02-29T15:54:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.softserve.hotels.controller.AdminControllerTest.testAccess() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="testAccess()[pri:0, instance:com.softserve.hotels.controller.AdminControllerTest@327f54e7]" test-instance-name="" name="testAccess" duration-ms="316" started-at="2016-02-29T15:54:09Z" finished-at="2016-02-29T15:54:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAccess -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.softserve.hotels.controller.AdminControllerTest@327f54e7]" test-instance-name="" name="springTestContextAfterTestMethod" is-config="true" duration-ms="6" started-at="2016-02-29T15:54:09Z" finished-at="2016-02-29T15:54:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.softserve.hotels.controller.AdminControllerTest.testAccess() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.softserve.hotels.controller.AdminControllerTest@327f54e7]" test-instance-name="" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="17" started-at="2016-02-29T15:54:09Z" finished-at="2016-02-29T15:54:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.softserve.hotels.controller.AdminControllerTest.testChangeUserRole() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="testChangeUserRole()[pri:0, instance:com.softserve.hotels.controller.AdminControllerTest@327f54e7]" test-instance-name="" name="testChangeUserRole" duration-ms="151" started-at="2016-02-29T15:54:09Z" finished-at="2016-02-29T15:54:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testChangeUserRole -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.softserve.hotels.controller.AdminControllerTest@327f54e7]" test-instance-name="" name="springTestContextAfterTestMethod" is-config="true" duration-ms="4" started-at="2016-02-29T15:54:09Z" finished-at="2016-02-29T15:54:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.softserve.hotels.controller.AdminControllerTest.testChangeUserRole() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.softserve.hotels.controller.AdminControllerTest@327f54e7]" test-instance-name="" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="15" started-at="2016-02-29T15:54:09Z" finished-at="2016-02-29T15:54:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.softserve.hotels.controller.AdminControllerTest.testDisableUser() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="testDisableUser()[pri:0, instance:com.softserve.hotels.controller.AdminControllerTest@327f54e7]" test-instance-name="" name="testDisableUser" duration-ms="69" started-at="2016-02-29T15:54:09Z" finished-at="2016-02-29T15:54:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDisableUser -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.softserve.hotels.controller.AdminControllerTest@327f54e7]" test-instance-name="" name="springTestContextAfterTestMethod" is-config="true" duration-ms="3" started-at="2016-02-29T15:54:09Z" finished-at="2016-02-29T15:54:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.softserve.hotels.controller.AdminControllerTest.testDisableUser() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.softserve.hotels.controller.AdminControllerTest@327f54e7]" test-instance-name="" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="16" started-at="2016-02-29T15:54:09Z" finished-at="2016-02-29T15:54:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.softserve.hotels.controller.AdminControllerTest.testUserList() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="testUserList()[pri:0, instance:com.softserve.hotels.controller.AdminControllerTest@327f54e7]" test-instance-name="" name="testUserList" duration-ms="126" started-at="2016-02-29T15:54:09Z" finished-at="2016-02-29T15:54:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUserList -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.softserve.hotels.controller.AdminControllerTest@327f54e7]" test-instance-name="" name="springTestContextAfterTestMethod" is-config="true" duration-ms="2" started-at="2016-02-29T15:54:09Z" finished-at="2016-02-29T15:54:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.softserve.hotels.controller.AdminControllerTest.testUserList() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:com.softserve.hotels.controller.AdminControllerTest@327f54e7]" test-instance-name="" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2016-02-29T15:54:09Z" finished-at="2016-02-29T15:54:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- com.softserve.hotels.controller.AdminControllerTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

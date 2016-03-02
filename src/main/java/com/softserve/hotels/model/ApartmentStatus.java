@@ -1,0 +1,8 @@
+package com.softserve.hotels.model;
+
+public enum ApartmentStatus {
+
+    ENABLED, DISABLED, DISABLED_BY_RENTER, DISABLED_BY_MODERATOR,
+    DISABLED_BY_ADMIN, CREATED, PUBLISHED, UNPUBLISHED, ASSIGNED, APPROVED, CHANGED;
+
+}
